@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Push Notifications</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Push Notifications Demo</h1>
+        <hr/>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">1. Реєстрація</h5>
+                <div id="registration-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ім'я</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <button id="registerBtn" class="btn btn-primary">Зареєструватися</button>
+                </div>
+                 <div id="userInfo" class="d-none">
+                    <p>Ви зареєстровані як <strong id="userName"></strong>. Ваш ID: <strong id="userId"></strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+             <div class="card-body">
+                 <h5 class="card-title">2. Підписка на сповіщення</h5>
+                 <button id="subscribeBtn" class="btn btn-success" disabled>Підписатися</button>
+             </div>
+        </div>
+
+         <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">3. Надіслати тестове сповіщення</h5>
+                <button id="sendToMeBtn" class="btn btn-info" disabled>Надіслати мені</button>
+                <button id="broadcastBtn" class="btn btn-warning">Надіслати всім (Broadcast)</button>
+            </div>
+        </div>
+
+         <div id="log" class="mt-4 p-3 bg-light border rounded"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
